@@ -15,12 +15,14 @@
     <script src="js/controllers/controllers.js"></script>
     <script src="js/controllers/NavbarController.js"></script>
     <script src="js/services/articles.js"></script>
+    <script src="js/markdown/showdown.js"></script>
+    <script src="js/directives/markdown.js"></script>
 </head>
 <body class="page-blog-extend page-blog-post page-blog page-tertiary page">
 <section class="content-primary content">
 <div class="container">
 
-  <div class="navbar" ng-controller="NavbarController">
+  <div class="navbar">
 
       <header class="global-header" id="global-header" role="banner">
           <div class="wrapper clear">
@@ -39,7 +41,6 @@
         <div class="col-10 col">
             <article class="article-blog-post article hentry row">
                 <div class="article-blog-post-wrapper wrapper col-8 col right">
-
                     <ng-view></ng-view>
 
                 </div>
