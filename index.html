@@ -1,29 +1,33 @@
-<!doctype html>
 <html lang="fr" ng-app="blog">
 <head>
   <meta charset="utf-8">
   <title>Blog</title>
   <link href='favicon.ico' rel='icon' type='image/x-icon'/>
+
+  <!-- StyleSheet -->
   <link rel="stylesheet" href="css/css.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
 
+  <!-- librairies -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-resource.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  <script src="lib/showdown.js"></script>
 
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular/angular-resource.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/controllers/controllers.js"></script>
-    <script src="js/controllers/NavbarController.js"></script>
-    <script src="js/services/articles.js"></script>
-    <script src="js/markdown/showdown.js"></script>
-    <script src="js/directives/markdown.js"></script>
+  <!-- application -->
+  <script src="js/app.js"></script>
+  <script src="js/controllers/controllers.js"></script>
+  <script src="js/controllers/NavbarController.js"></script>
+  <script src="js/services/articles.js"></script>
+  <script src="js/directives/markdown.js"></script>
+
+
 </head>
 <body class="page-blog-extend page-blog-post page-blog page-tertiary page">
 <section class="content-primary content">
 <div class="container">
-
   <div class="navbar">
-
       <header class="global-header" id="global-header" role="banner">
           <div class="wrapper clear">
               <nav class="nav-primary nav">
@@ -32,6 +36,7 @@
                       <li class="nav-item-about nav-item"><a href="" data-track-event="Top Nav,About"><i class="fa fa-code-fork logo"></i></a></li>
                       <li class="nav-item-work nav-item" ng-class="{active: routeIs('/')}"><a href="#/">Accueil</a></li>
                       <li class="nav-item-work nav-item" ng-class="{active: routeIs('/about')}"><a href="#/about">A propos</a></li>
+                      <li class="nav-item-work nav-item" ng-class="{active: routeIs('/admin')}"><a href="#/admin">Administration</a></li>
                   </ul>
               </nav>
           </div>
@@ -42,13 +47,11 @@
             <article class="article-blog-post article hentry row">
                 <div class="article-blog-post-wrapper wrapper col-8 col right">
                     <ng-view></ng-view>
-
                 </div>
                 <aside class="aside-blog-post aside col-2 col stickem">
                     <section class="section-author section author vcard clear">
-
                         <figure class="photo-frame-no-border photo-frame encircle">
-                            <img src="/viget/img/moi.jpg" width="100px" alt="Emmanuel Vanhoucke" class="photo">
+                            <img src="img/moi.jpg" width="100px" alt="Emmanuel Vanhoucke" class="photo">
                         </figure>
                         <div class="author-meta">
                             <span class="fn">Emmanuel Vanhoucke</span>
@@ -61,23 +64,12 @@
                         <a href="https://twitter.com/vanhouckee" title="@vanhouckee"><i class="fa fa-twitter"></i></a>&nbsp;
                         <a href="https://github.com/evanhoucke" title="Github"><i class="fa fa-github"></i></a>
                     </section>
-
-
                     <div class="big-screen-hide">
-
-
-
                     </div>
-
-
-
-
-
                 </aside>
             </article>
         </div>
         <aside class="aside col-2 col">
-
             <section class="section-blog-navigation section-blog-module section">
                 <header class="section-header header">
                     <h1>A propos…</h1>
@@ -102,42 +94,17 @@
                     </ul>
                 </div>
             </section>
-
-
-
         </aside>
     </section>
-
-
 </div>
 </section>
 
 <footer class="global-footer" id="global-footer">
-
     <div class="vcard">
         <div class="wrapper">
             <p class="note">Blog d'Emmanuel Vanhoucke @ 2014 - unix-fr.org - Built with AngularJS</p>
         </div>
     </div>
 </footer>
-<!-- In production use:
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-resource.min.js"></script>
--->
-
-<!--<script src="js/controllers/CheckoutController.js"></script>
-<script src="js/controllers/CustomerController.js"></script>
-
-<script src="js/controllers/RestaurantsController.js"></script>
-<script src="js/controllers/ThankYouController.js"></script>
-<script src="js/directives/fmDeliverTo.js"></script>
-<script src="js/directives/fmCheckboxList.js"></script>
-<script src="js/directives/fmRating.js"></script>
-<script src="js/services/alert.js"></script>
-<script src="js/services/customer.js"></script>
-<script src="js/services/localStorage.js"></script>
-<script src="js/services/cart.js"></script>
-<script src="js/services/Restaurant.js"></script>-->
-
 </body>
 </html>

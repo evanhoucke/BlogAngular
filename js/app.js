@@ -1,6 +1,6 @@
 'use strict';
 
-var blog = angular.module('blog', ['ngResource','articleControllers','articlesServices']);
+var blog = angular.module('blog', ['ngRoute','ngResource','articleControllers','articlesServices']);
 
 blog.config(function($routeProvider) {
   $routeProvider.when('/', {templateUrl: 'views/home.html'});
