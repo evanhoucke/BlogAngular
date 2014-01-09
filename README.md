@@ -1,4 +1,4 @@
 BlogAngular
 ===========
 
-A blog made with AngularJs
+A blog built with AngularJs
