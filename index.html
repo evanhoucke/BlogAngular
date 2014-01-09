@@ -3,9 +3,18 @@
 <head>
   <meta charset="utf-8">
   <title>Blog</title>
+  <link href='favicon.ico' rel='icon' type='image/x-icon'/>
   <link rel="stylesheet" href="css/css.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
+
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-resource.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/controllers.js"></script>
+    <script src="js/controllers/NavbarController.js"></script>
+    <script src="js/services/articles.js"></script>
 </head>
 <body class="page-blog-extend page-blog-post page-blog page-tertiary page">
 <section class="content-primary content">
@@ -19,7 +28,7 @@
                   <ul class="clear">
 
                       <li class="nav-item-about nav-item"><a href="" data-track-event="Top Nav,About"><i class="fa fa-code-fork logo"></i></a></li>
-                      <li class="nav-item-work nav-item" ng-class="nav-item-about nav-item {active: routeIs('/')}"><a href="#/">Accueil</a></li>
+                      <li class="nav-item-work nav-item" ng-class="{active: routeIs('/')}"><a href="#/">Accueil</a></li>
                       <li class="nav-item-work nav-item" ng-class="{active: routeIs('/about')}"><a href="#/about">A propos</a></li>
                   </ul>
               </nav>
@@ -88,6 +97,7 @@
                         <li><a href="#/angularjs">AngularJs</a></li>
                         <li><a href="#/jboss">Jboss</a></li>
                         <li><a href="#/linux">Linux</a></li>
+                        <li><a href="#/git">Git</a></li>
                     </ul>
                 </div>
             </section>
@@ -105,7 +115,7 @@
 
     <div class="vcard">
         <div class="wrapper">
-            <p class="note">Blog d'Emmanuel Vanhoucke @ 2014 - unix-fr.org</p>
+            <p class="note">Blog d'Emmanuel Vanhoucke @ 2014 - unix-fr.org - Built with AngularJS</p>
         </div>
     </div>
 </footer>
@@ -113,11 +123,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-resource.min.js"></script>
 -->
-<script src="lib/angular/angular.js"></script>
-<script src="lib/angular/angular-resource.js"></script>
-<script src="js/app.js"></script>
-<script src="js/controllers/MenuController.js"></script>
-<script src="js/controllers/NavbarController.js"></script>
 
 <!--<script src="js/controllers/CheckoutController.js"></script>
 <script src="js/controllers/CustomerController.js"></script>
