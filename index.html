@@ -45,10 +45,14 @@
                                     <img style="vertical-align: top" src="img/flag-en_GB.png" ng-click="changeLanguage('en')">
                                 <img style="vertical-align: top" src="img/flag-fr_FR.png" ng-click="changeLanguage('fr')">
 
-                  <!--<div ng-controller="Ctrl1" >-->
-                      <google-plus-signin ng-class="{ disabled: !logged }" clientid="121704928231-lm312jo9473jvbdld51r2caupdadah58" ></google-plus-signin>
-                      <!--</div>-->
+                  <div ng-hide="logged" style="display: initial;">
+                      <google-plus-signin clientid="121704928231-lm312jo9473jvbdld51r2caupdadah58" ></google-plus-signin>
+                      </div>
+                  <div ng-show="logged" style="display: initial;">
 
+                      <img ng-src="{{avatargoogle}}" width="35px">
+                      <b class="fn"> {{usernamegoogle}}</b>
+                  </div>
               </div>
           </div>
       </header>

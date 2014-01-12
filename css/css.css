@@ -21,6 +21,13 @@ padding:0;
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
 }
+.blackwhite:hover {
+    -webkit-filter: initial;
+    -moz-filter:initial;
+    -ms-filter:initial;
+    -o-filter:initial;
+}
+
 article,aside,figure,footer,header,nav,section{display:block}
 audio:not([controls]){display:none}
 html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
